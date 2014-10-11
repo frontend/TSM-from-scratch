@@ -95,7 +95,8 @@ gulp.task('styles', function() {
  */
 gulp.task('scripts', function() {
   return gulp.src([
-        'assets/js/app.js'
+        'assets/js/app.js',
+        'assets/js/controllers/main.js'
       ])
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
