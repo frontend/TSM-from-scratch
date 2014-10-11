@@ -90,7 +90,9 @@ gulp.task('styles', function() {
  * And jshint check to highlight errors as we go.
  */
 gulp.task('scripts', function() {
-  return gulp.src('assets/js/*.js')
+  return gulp.src([
+        'assets/js/app.js'
+      ])
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.concat('main.js'))
