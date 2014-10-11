@@ -32,19 +32,10 @@ gulp.task('vendors', function() {
    */
 
   gulp.src([
-      'bower_components/jquery/dist/jquery.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js'
+      'bower_components/angular/angular.js',
+      'bower_components/angular-strap/dist/angular-strap.js',
+      'bower_components/angular-strap/dist/angular-strap.tpl.js',
+      'bower_components/moment/moment.js'
     ])
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())
