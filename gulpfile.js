@@ -35,6 +35,10 @@ gulp.task('vendors', function() {
       'bower_components/angular/angular.js',
       'bower_components/angular-strap/dist/angular-strap.js',
       'bower_components/angular-strap/dist/angular-strap.tpl.js',
+      'bower_components/angular-messages/angular-messages.js',
+      'bower_components/angular-resource/angular-resource.js',
+      'bower_components/angular-route/angular-route.js',
+      'bower_components/angular-cookies/angular-cookies.js',
       'bower_components/moment/moment.js'
     ])
     .pipe($.concat('vendors.min.js'))
