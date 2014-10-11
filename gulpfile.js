@@ -121,7 +121,7 @@ gulp.task('clean', del.bind(null, ['build', 'styleguide']));
 gulp.task('serve', ['styles', 'scripts'], function () {
   browserSync({
     server: {
-      baseDir: ['styleguide'],
+      baseDir: ['public'],
     },
     open: false
   });

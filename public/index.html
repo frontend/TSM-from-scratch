@@ -11,15 +11,35 @@
     <link rel="stylesheet" href="css/tsm.css">
 
     <!--[if lt IE 9]>
-      <script src="build/js/polyfills.js"></script>
+      <script src="js/polyfills.js"></script>
     <![endif]-->
   </head>
 
   <body>
+    <div class="navbar navbar-default navbar-static-top" role="navigation" bs-navbar>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <span class="glyphicon glyphicon-film"></span>
+          TV Shows Manager
+        </a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li data-match-route="/$"><a href="/">Home</a></li>
+        <li data-match-route="/add"><a href="/add">Add</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right" ng-if="!currentUser">
+        <li data-match-route="/login"><a href="/login">Login</a></li>
+        <li data-match-route="/signup"><a href="/signup">Sign up</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right" ng-if="currentUser">
+        <li class="navbar-text" ng-bind="currentUser.email"></li>
+        <li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
+      </ul>
+    </div>
 
     <div ng-view></div>
 
-    <script src="build/js/vendors.min.js"></script>
-    <script src="build/js/main.js"></script>
+    <script src="js/vendors.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
