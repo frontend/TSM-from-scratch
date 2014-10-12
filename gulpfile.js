@@ -97,6 +97,7 @@ gulp.task('scripts', function() {
   return gulp.src([
         'assets/js/app.js',
         'assets/js/controllers/main.js',
+        'assets/js/controllers/add.js',
         'assets/js/services/show.js',
       ])
     .pipe($.jshint())
